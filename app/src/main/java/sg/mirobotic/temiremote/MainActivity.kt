@@ -42,7 +42,9 @@ class MainActivity : AppCompatActivity(), OnRobotInteractionListener, OnRobotLif
         robot?.addAsrListener(this)
 
         setFace(R.drawable.g1)
-
+        handler.postDelayed({
+            speak("Hi, My name is temi!")
+        }, 1000)
     }
 
     private fun setFace(face: Int) {
