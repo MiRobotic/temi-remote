@@ -81,7 +81,9 @@ class MainActivity : AppCompatActivity(), OnRobotInteractionListener, OnRobotLif
 
     override fun onAsrResult(asrResult: String) {
         Log.e(TAG, "onAsrResult >> $asrResult")
-        setFace(R.drawable.g2)
+        handler.postDelayed({
+            setFace(R.drawable.g2)
+        }, 2000)
         robot?.startDefaultNlu(asrResult)
     }
 
